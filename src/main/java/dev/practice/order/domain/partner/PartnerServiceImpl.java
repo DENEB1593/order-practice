@@ -42,7 +42,7 @@ public class PartnerServiceImpl implements PartnerService {
         Partner partner = partnerReader.getPartner(partnerToken);
         partner.enable();
 
-        return null;
+        return new PartnerInfo(partner);
     }
 
     @Override
@@ -51,6 +51,6 @@ public class PartnerServiceImpl implements PartnerService {
         Partner partner = partnerReader.getPartner(partnerToken);
         partner.disable();
 
-        return null;
+        return new PartnerInfo(partner);
     }
 }
